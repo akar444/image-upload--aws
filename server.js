@@ -38,6 +38,8 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/client/index.html');
 });
 
-app.listen(8000, (err) => {
+var port = process.env.PORT || 8000;
+
+app.listen(port, (err) => {
     console.log(`Server running on port: 8000`);
 });

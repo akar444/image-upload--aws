@@ -10,8 +10,6 @@ angular.module('myApp').directive('fileDropzone', ['$ImageFactory', function($Im
             var processDragOverOrEnter,
                 validMimeTypes;
 
-            console.log($ImageFactory);
-
             processDragOverOrEnter = function (event) {
                 if (event != null) {
                     event.preventDefault();
