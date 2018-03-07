@@ -1,0 +1,117 @@
+* {
+    margin:0;
+    padding:0;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+}
+
+body.open {
+    overflow: hidden;
+}
+
+.content-wrapper.open {
+    opacity: 0.3;
+}
+
+.image-wrapper {
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 8, 8, 0.66);
+}
+
+#myCarousel {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 20%;
+}
+
+.carousel-inner, .carousel-inner > .item, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+    height: 100% !important;
+}
+
+.dropzone-wrapper {
+    width: 70%;
+    height: 145px;
+    margin: 10px auto;
+    margin-bottom: 40px;
+    background: rgba(40, 96, 144, 0.1);
+    padding: 15px;
+}
+
+.dropzone {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    outline: 2px dashed blue;
+}
+
+.dropzone.over {
+    background: rgba(156, 151, 151, 0.4);
+}
+
+.upload-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.upload-file + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: rgba(23, 92, 222, 0.65);
+    display: inline-block;
+    padding: 10px 20px;
+    width: 235px;
+    text-align: center;
+}
+
+.upload-file:focus + label, .upload-file + label:hover {
+    background-color: #0011ff;
+}
+
+.upload-file + label {
+    cursor: pointer;
+}
+
+.upload-file + label > span:first-child{
+    width: 16%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.loader {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
