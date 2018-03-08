@@ -94,10 +94,12 @@ let imageController = ({AWS, fs}) => {
                 res.status(500).send({status: false, error: err, message: err.message || 'Something went wrong'})
             } else {
                 if(data) {
+                    data.Contents.sort((a,b) => {
+                        return (new Date(b.LastModified).getTime() - new Date(a.LastModified).getTime())
+                    });
+                    data.Contents.pop();
                     data.Contents.forEach((img, i) => {
-                        if(i != 0) {
-                            files.push(img.Key);
-                        }
+                        files.push(img.Key);
                     });
                 }
                 res.send({status: true, files});
