@@ -20,9 +20,9 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/client'));
 
 AWS.config.update({
-    secretAccessKey: awsConfig.SECRET_ACCESS_KEY,
-    accessKeyId: awsConfig.ACCESS_KEY_ID,
-    region: awsConfig.REGION
+    secretAccessKey: process.env.AWS_SECRET_KEY,
+    accessKeyId: process.env.AWS_ACCESS_KEY,
+    region: process.env.REGION
 });
 
 const packages = {
