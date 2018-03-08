@@ -23,6 +23,7 @@ body.open {
     height: 200px;
     display: inline-block;
     margin: 10px;
+    cursor: pointer;
 }
 
 img {
