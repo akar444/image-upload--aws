@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const AWS = require('aws-sdk');
 const fs = require('fs');
-const awsConfig = require('./configuration/awsConfig');
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
